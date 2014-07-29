@@ -5,7 +5,13 @@ docker-jenkins-master
 
 To run the container, do the following:
 
-    /usr/bin/docker run --name TAG -p HOST_PORT:8080 -v /path/to/data/dir:/var/lib/jenkins -v /path/to/logs:/var/log/jenkins juanbrein/jenkins-master
+    /usr/bin/docker run \
+      -d \
+      --name TAG \
+      -p HOST_PORT:8080 \
+      -v /path/to/data/dir:/var/lib/jenkins \
+      -v /path/to/logs:/var/log/jenkins \
+      juanbrein/jenkins-master
 
 Your jenkins instance is now available by going to http://localhost
 
