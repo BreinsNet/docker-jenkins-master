@@ -25,6 +25,11 @@ A prebuilt container is also available in the docker index
 
     docker pull juanbrein/jenkins-master
 
+## Building
+
+Check the Dockerfile, the install plugins script will download specific versions so
+that your jenkins installations can be reproduced. 
+
 ## Author
 
   * Juan Breinlinger (<juan@breins.net>)
