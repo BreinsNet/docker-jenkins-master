@@ -1,0 +1,14 @@
+Description=Jenkins Master
+After=docker.service
+After=jenkins-data.service
+Requires=docker.service
+Requires=jenkins-data.service
+
+[Service]
+ExecStartPre=-/usr/bin/docker kill jenkins-master
+ExecStartPre=-/usr/bin/docker rm jenkins-master
+ExecStart=/bin/bash -c '/usr/bin/docker run --name jenkins-master -p 80:8080 -p 8000:8000 -v /data/jenkins/lib:/var/lib/jenkins -v /data/jenkins/logs:/var/log/jenkins jenkins-master'
+ExecStop=/bin/bash -c '/usr/bin/docker stop jenkins-master'
+
+[Install]
+WantedBy=multi-user.target

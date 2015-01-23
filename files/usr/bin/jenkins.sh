@@ -10,4 +10,4 @@ exec 2>&1                            # stderr to log file
 
 rsync -a --delete /opt/jenkins/plugins/ /var/lib/jenkins/plugins/
 
-su - jenkins -c "JENKINS_HOME=/var/lib/jenkins /usr/bin/java -Djava.awt.headless=true -jar /usr/share/jenkins/jenkins.war --webroot=/var/cache/jenkins/war --httpPort=8080 --ajp13Port=-1"
+su - jenkins -c "JENKINS_HOME=/var/lib/jenkins /usr/bin/java  -Duser.timezone=Europe/London -Djava.awt.headless=true -jar /usr/share/jenkins/jenkins.war --webroot=/var/cache/jenkins/war --httpPort=8080 --ajp13Port=-1 "
