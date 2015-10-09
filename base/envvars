@@ -1,0 +1,2 @@
+export DT_REBUILD_ROOT=true
+export DT_NO_CACHE=false

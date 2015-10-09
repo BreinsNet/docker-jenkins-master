@@ -5,5 +5,5 @@ docker-jenkins-master
 
 To build the container, run:
 
-$ ./build.sh
+$ rspec
 
